@@ -1,0 +1,31 @@
+pdf file
+https://www.dropbox.com/home/2024_unity
+
+unity는 왼손 좌표계
+
+GameObject 메뉴
+- Align With View 내가 바라보는 방향으로 GameObject를 이동
+- Align View to Selected 는 카메라가 바라보는 방향을 보여줌
+
+Layers 오른쪽 위의 메뉴
+Hierarchy 창이나 Inspection 창, Game 창 등의 크기 설정
+
+Edit - Undo History
+
+Universal Render PipeLine 설정
+1. Package Manager - Unity Registry - Search(Universal RP)
+2. Project Layer - Create - Rendering - URP Asset
+3. Edit - Project Settings - Graphics - Scriptable Render Pipeline Settings 에 2. 에서 만든 Asset을 넣어줌
+
+Scene View
+- Toggle Tool Handle Position
+    Pivot - 맨 밑에
+    Center - 가운데
+
+- Toggle Tool Handle Rotation
+    Global - 메인 화면을 기준으로 기즈모 적용
+    Local - 오브젝트 기준으로 기즈모 방향 적용
+
+Prefab
+- Prefab 을 Hierarchy 창에 넣으면 Transform이 지정된 Transform으로 적용
+- Scene View에 넣으면 마우스 Transform으로 적용

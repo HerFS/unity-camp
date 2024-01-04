@@ -1,0 +1,26 @@
+변수란 무엇인가
+
+Material
+Shader - Standard : 기본
+Shader - URP - Lit : URP
+
+vertical : 수직
+horizontal : 수평
+
+translate 와 position, velocity 차이점 알아둘 것
+
+texture file 확장명
+.tga, .png
+
+c#
+public class CubePhysics : MonoBehaviour // CubePhysics 자식, MonoBehaviour, 부모
+
+movement : Translate, position, rigidbody.velocity
+        transform.Translate(new Vector3(1f, 1f, 1f)); // 지금 위치에서 지정한 값을 더함
+        transform.position = new Vector3(1f, 1f, 1f); // 지정한 값으로 위치 이동
+var keyword
+        var Variable1 = 1; // int type 자동으로 형 변환 해줌
+        var Variable2 = 'c'; // char type
+
+
+궁금한 내용 : gameManager 사용하는 이유, tga file, unity 3d 맵 툴, [] 그룹 묶는 방법, material 바꾸는 방법
