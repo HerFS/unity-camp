@@ -1,21 +1,33 @@
 Collision, Detection : https://maloveforme.tistory.com/35
 
-translate vs velocity
+Translate vs Velocity
 https://gamdekong.tistory.com/204
 https://hoil2.tistory.com/25
 
-rotate
+Rotate
 https://sikpang.tistory.com/2
 
-rigidbody movement 경사면 
+Rigidbody Movement 경사면 
 https://daekyoulibrary.tistory.com/entry/Charon-3-%EA%B2%BD%EC%82%AC%EB%A1%9CSlope-%EC%A7%80%ED%98%95-%EC%9D%B4%EB%8F%99-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
 
 event function life cycle
 https://docs.unity3d.com/kr/2021.3/Manual/ExecutionOrder.html
 
-keycode 종류
+Keycode 종류
 https://chameleonstudio.tistory.com/26
 
-getkey
+Getkey
 https://ariel1910.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-2-%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%9E%85%EB%A0%A5%EB%B0%9B%EA%B8%B0-Input
 
+Batches
+https://shkim0811.tistory.com/48
+https://zagara.tistory.com/10
+
+drawCall
+https://funfunhanblog.tistory.com/302
+
+블로그
+https://wlsdn629.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-Rigidbody-Collision-Detection
+
+
+PARSEC - 듀얼로 같이 작업

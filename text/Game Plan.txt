@@ -1,0 +1,32 @@
+Monster Tools
+
+Character Stats
+Name - Main Menu에서 결정
+Job : Healer, Dealer, Tanker
+Quest
+HP
+Mana
+Exp
+Damage
+Critical Damage
+Defense
+Move Speed
+Jump Force
+
+Character Skills
+
+Skill Tree - Basic Skills - Change Jobs - Healer, Dealer, Tanker
+
+Monster Stats
+public
+몬스터의 종류 : 
+이름
+체력
+공격력
+방어력
+경험치
+이동속도
+점프를 하는지?
+크리티컬 데미지?
+
+
