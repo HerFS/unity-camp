@@ -1,0 +1,12 @@
+지역 변수, 전역 변수, 함수, 매개변수
+
+File - save as 
+Copy Scene
+
+OnMouseDown - 모바일에서 적용 X
+collider 필요 - 충돌 정보
+object를 클릭 시 실행
+
+rotation freeze
+        rigid.constraints = RigidbodyConstraints.FreezeRotation; // all
+        rigid.constraints = RigidbodyConstraints.FreezeRotationX; // X
