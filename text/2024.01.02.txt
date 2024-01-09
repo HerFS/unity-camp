@@ -1,6 +1,3 @@
-pdf file
-https://www.dropbox.com/home/2024_unity
-
 unity는 왼손 좌표계
 
 GameObject 메뉴

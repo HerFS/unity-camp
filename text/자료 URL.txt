@@ -1,3 +1,19 @@
+pdf file
+https://www.dropbox.com/home/2024_unity
+
+Collider - 기본
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=gold_metal&logNo=220466872002
+
+박스 밀기 - 중요
+https://www.youtube.com/watch?v=uWe1OV4T8pQ
+IK animation - 중요
+https://leekangw.github.io/posts/9/
+Animation Layer, Animation Avatar Mask, Avatar Mapping
+https://wergia.tistory.com/57
+https://eunjin3786.tistory.com/517
+https://m.blog.naver.com/enter_maintanance/221363106804
+
+
 Collision, Detection : https://maloveforme.tistory.com/35
 
 Translate vs Velocity
@@ -26,8 +42,14 @@ https://zagara.tistory.com/10
 drawCall
 https://funfunhanblog.tistory.com/302
 
+Raycast - 중요
+https://twosouls.tistory.com/20
+https://sikpang.tistory.com/4
+https://www.youtube.com/watch?v=eTehhXJtiPo
+
 블로그
 https://wlsdn629.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-Rigidbody-Collision-Detection
+
 
 
 PARSEC - 듀얼로 같이 작업

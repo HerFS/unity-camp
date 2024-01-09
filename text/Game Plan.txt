@@ -1,8 +1,30 @@
 Monster Tools
 
+Character Movement
+캐릭터가 움직이기 위해서 Vertical, Horizontal 키입력
+달리기 버튼 left Shift
+상호 작용 키 Space bar
+공격 Ctrl
+점프 Alt - Raycast 바닥체크
+앉기 예정 C - crouch(웅크림) - 이것을 하려면 collider 반으로 줄여야됨
+아이템 줍기 Z
+Inventory Key I
+Equipment E
+아이템 1234 번까지?
+Skill Key 예정 - 유저 키 설정
+경사로 체크 - 계단 오르기 Raycast
+Move Speed
+Run Speed
+Input Key
+Gravity Power
+Jump Force
+
+카메라 따라가게 만들기 
+
+
 Character Stats
 Name - Main Menu에서 결정
-Job : Healer, Dealer, Tanker
+Job : Healer, Dealer, Tanker, 소환수
 Quest
 HP
 Mana
@@ -10,12 +32,13 @@ Exp
 Damage
 Critical Damage
 Defense
-Move Speed
-Jump Force
+Money
 
 Character Skills
 
-Skill Tree - Basic Skills - Change Jobs - Healer, Dealer, Tanker
+Skill Tree - Basic Skills - Change Jobs(Healer, Dealer, Tanker)
+
+
 
 Monster Stats
 public
