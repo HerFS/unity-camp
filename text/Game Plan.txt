@@ -1,3 +1,19 @@
+https://github.com/LHuHyeon/Unity3D_RPG_Portfolio?tab=readme-ov-file
+https://github.com/Junsu97/Resistance?tab=readme-ov-file
+
+우선 캐릭터를 먼저 선정한다.
+playerStat
+- 캐릭터 움직임(걷기, 달리기, 점프)
+- 캐릭터 애니메이션
+- 캐릭터 상호작용 키(상호작용, 아이템 줍기, 앉기, 아이템창, 스킬, 공격, 소모 아이템)
+- 경사로 체크, 콜라이더 설정, 바닥 체크, rigidbody, 앉을 때 collider 반으로 줄임
+
+카메라
+- 카메라가 플레이어를 바라봄.
+- alt 마우스 왼쪽클릭으로 카메라 회전가능(커맨드 키)
+- 
+
+
 Monster Tools
 
 Character Movement
@@ -54,5 +70,4 @@ public
 
 chat system(전쳇, 파티쳇, 길드쳇)
 party system, guild system
-
 
