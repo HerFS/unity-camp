@@ -9,6 +9,7 @@ public class InputTest : MonoBehaviour
     public Vector3 moveDirection;
     public float moveSpeed = 4f;
     public float jumpForce = 4f;
+    public float runValue = 1f;
     public bool isGrounded;
     public bool isInteraction;
 
@@ -35,8 +36,7 @@ public class InputTest : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        RaycastHit hit;
-        if (Physics.Raycast(FootRaycastPos.transform.position, Vector3.down, out hit, 0.1f))
+        if (Physics.Raycast(FootRaycastPos.transform.position, Vector3.down, 0.1f))
         {
             Debug.DrawRay(FootRaycastPos.transform.position, Vector3.down * 0.1f, Color.red);
             isGrounded = true;
@@ -56,7 +56,7 @@ public class InputTest : MonoBehaviour
         {
             //float currentMoveSpeed = moveSpeed * CONVERT_UINT_VALUE;
             LookAt();
-            rb.velocity = moveDirection * moveSpeed + Vector3.up * rb.velocity.y;
+            rb.velocity = moveDirection * runValue * moveSpeed + Vector3.up * rb.velocity.y;
             //transform.rotation = Quaternion.LookRotation(moveDirection);
             //transform.eulerAngles = moveDirection;
             //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -102,6 +102,18 @@ public class InputTest : MonoBehaviour
         }
     }
 
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            runValue = 2f;
+        }
+        else
+        {
+            runValue = 1f;
+        }
+    }
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded)
@@ -123,5 +135,6 @@ public class InputTest : MonoBehaviour
             isInteraction = false;
         }
     }
+
     #endregion
 }
