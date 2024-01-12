@@ -13,19 +13,23 @@ public class InputTest : MonoBehaviour
     public bool isGrounded;
     public bool isInteraction;
 
+    const float RAY_DISTANCE = 2f;
+    RaycastHit slopeHit;
+    [Header("slope")]
+    public int groundLayer; // 땅 레이어만 체크
+    public float maxSlopeAngle;
+    public float angle;
+    public bool isSlope = false;
+    public Vector3 direction;
+
     protected const float CONVERT_UINT_VALUE = 0.1f;
 
     Rigidbody rb;
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        groundLayer = 1 << LayerMask.NameToLayer("Ground");
     }
 
     void FixedUpdate()
@@ -47,16 +51,36 @@ public class InputTest : MonoBehaviour
             isGrounded = false;
         }
     }
+    void Update()
+    {
+        isSlope = IsOnSlope();
+        FreezePosition();
+    }
 
+    void FreezePosition()
+    {
+        if (moveDirection == Vector3.zero)
+        {
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+    }
     void Move()
     {
         bool hasControl = (moveDirection != Vector3.zero);
+
+        Vector3 velocity = isSlope ? AdjustDirectionToSlope(moveDirection) : moveDirection;
+        Vector3 gravity = isSlope ? Vector3.zero : Vector3.down * Mathf.Abs(rb.velocity.y);
 
         if (hasControl)
         {
             //float currentMoveSpeed = moveSpeed * CONVERT_UINT_VALUE;
             LookAt();
-            rb.velocity = moveDirection * runValue * moveSpeed + Vector3.up * rb.velocity.y;
+            //rb.velocity = moveDirection * runValue * moveSpeed + Vector3.up * rb.velocity.y;
+            rb.velocity = velocity * moveSpeed + gravity * runValue;
             //transform.rotation = Quaternion.LookRotation(moveDirection);
             //transform.eulerAngles = moveDirection;
             //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -71,25 +95,43 @@ public class InputTest : MonoBehaviour
         }
     }
 
-    #region SEND_MESSAGE
-
-    void OnMove(InputValue value)
+    bool IsOnSlope()
     {
-        Vector2 input = value.Get<Vector2>();
-        if (input != null)
+        Ray ray = new Ray(transform.position, Vector3.down);
+        if (Physics.Raycast(ray, out slopeHit, RAY_DISTANCE, groundLayer))
         {
-            moveDirection = new Vector3(input.x, 0f, input.y);
-            Debug.Log($"SEND MESSAGE : {input.magnitude}");
+            Debug.DrawLine(slopeHit.point, slopeHit.point + slopeHit.normal, Color.blue);
+            angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            return angle != 0f && angle < maxSlopeAngle;
         }
+
+        return false;
     }
 
-    void OnJump()
+    protected Vector3 AdjustDirectionToSlope(Vector3 direction)
     {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        rb.velocity = Vector3.zero; // 위의 AddForce 의 추가 값을 없애줌 (통통 튀는 현상)
-        Debug.Log("Input Event Jump");
+        return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
     }
-    #endregion
+
+    //#region SEND_MESSAGE
+
+    //void OnMove(InputValue value)
+    //{
+    //    Vector2 input = value.Get<Vector2>();
+    //    if (input != null)
+    //    {
+    //        moveDirection = new Vector3(input.x, 0f, input.y);
+    //        Debug.Log($"SEND MESSAGE : {input.magnitude}");
+    //    }
+    //}
+
+    //void OnJump()
+    //{
+    //    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    //    rb.velocity = Vector3.zero; // 위의 AddForce 의 추가 값을 없애줌 (통통 튀는 현상)
+    //    Debug.Log("Input Event Jump");
+    //}
+    //#endregion
 
     #region UNITY_EVENETS
     public void OnMove(InputAction.CallbackContext context)
