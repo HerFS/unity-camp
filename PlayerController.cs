@@ -7,9 +7,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Animator))]
 
-public class PlayerCotroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    //Animator animator; // animation
+    Animator animator; // animation
     Rigidbody rb;
 
     [Header("Movement")]
@@ -39,11 +39,12 @@ public class PlayerCotroller : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] Vector3 velocity;
     [SerializeField] Vector3 gravity;
+    Vector3 frontSlopeCheckPos = new Vector3(0f, 0f, 0f);
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
     private void Start()
     {
@@ -89,7 +90,9 @@ public class PlayerCotroller : MonoBehaviour
         isGrounded = IsGrounded();
         gravity = Vector3.down * Mathf.Abs(rb.velocity.y);
 
-        //animator.SetBool("isMove", false);
+        animator.SetBool("isMove", false);
+
+        CheckSlopePos();
 
         if (hasControl)
         {
@@ -98,15 +101,13 @@ public class PlayerCotroller : MonoBehaviour
                 gravity = Vector3.zero;
             }
 
-            CheckSlopePos();
-
             LookAt();
             velocity = CalculateNextFrameGroundAngle(RunCheck()) <= maxSlopeAngle ? AdjustDirectionToSlope(moveDirection) : Vector3.zero;
             rb.velocity = velocity * RunCheck() + gravity;
 
-            //animator.SetBool("isMove", true);
+            animator.SetBool("isMove", true);
 
-            //animator.SetFloat("Velocity", animationPlayerMoveValue);
+            animator.SetFloat("Velocity", animationPlayerMoveValue);
         }
     }
 
@@ -198,8 +199,40 @@ public class PlayerCotroller : MonoBehaviour
 
     private void CheckSlopePos() // repair
     {
+        frontSlopeCheckPos.y = 0.5f;
+        frontSlopeCheck.position = frontSlopeCheckPos;
+
+        //Debug.Log("transform" + transform.TransformDirection(transform.position));
+        //Debug.Log("frontslope" + frontSlopeCheckPos);
+        //Debug.Log("slopeHit" + slopeHit.point);
+
         if (slopeHit.point.y > transform.position.y)
         {
+            Debug.Log(moveDirection);
+            if (moveDirection.z == 1f && !isOnSlope)
+            {
+                frontSlopeCheckPos.x = transform.position.x;
+                frontSlopeCheckPos.z = transform.position.z + 0.3f;
+            }
+            else if (moveDirection.z == -1f && !isOnSlope)
+            {
+                frontSlopeCheckPos.x = transform.position.x;
+                frontSlopeCheckPos.z = transform.position.z - 0.3f;
+            }
+            else if (moveDirection.x == 1f && !isOnSlope)
+            {
+                frontSlopeCheckPos.x = transform.position.x + 0.3f;
+                frontSlopeCheckPos.z = transform.position.z;
+            }
+            else if (moveDirection.x == -1f && !isOnSlope)
+            {
+                frontSlopeCheckPos.x = transform.position.x - 0.3f;
+                frontSlopeCheckPos.z = transform.position.z;
+            } else if (isOnSlope)
+            {
+                frontSlopeCheckPos = transform.position;    
+            }
+
             // slopeCheck.position.z = 0.5
             // (if slope -> ground 도달하면 == isSlopeOn false 일때) slopeCheck.position.z = 0 
         }
