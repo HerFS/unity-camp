@@ -200,8 +200,8 @@ public class PlayerCotroller : MonoBehaviour
     {
         if (slopeHit.point.y > transform.position.y)
         {
-            // slopeCheck position.z = 0.5
-            // (if slope -> ground 도달하면 == isSlopeOn false 일때) slopeCheck position.z = 0 
+            // slopeCheck.position.z = 0.5
+            // (if slope -> ground 도달하면 == isSlopeOn false 일때) slopeCheck.position.z = 0 
         }
         else
         {
