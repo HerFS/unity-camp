@@ -163,7 +163,7 @@ public class PlayerCotroller : MonoBehaviour
         Ray ray = new Ray(frontSlopeCheck.position, Vector3.down);
         if (Physics.Raycast(ray, out slopeHit, slopeRayDistance, groundLayer))
         {
-            if (slopeHit.point.y >= transform.position.y)
+            if (slopeHit.point.y >= transform.position.y) // repair
             {
                 //frontSlopeCheck.position = new Vector3(0f, 0.5f, 0.1f);
                 frontSlopeCheck.position = transform.TransformDirection(transform.position.x, transform.position.y + 0.5f, transform.position.z + 0.1f);
