@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("isMove", false);
 
-        CheckSlopePos();
+        //CheckSlopePos();
 
         if (hasControl)
         {
@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
         {
             angle = Vector3.Angle(Vector3.up, slopeHit.normal);
 
-            Debug.DrawLine(slopeHit.point, slopeHit.point + slopeHit.normal, Color.cyan);
+            Debug.DrawLine(slopeHit.point, slopeHit.point + slopeHit.normal, Color.blue);
 
             return angle != 0f && angle <= maxSlopeAngle;
         }
@@ -197,50 +197,58 @@ public class PlayerController : MonoBehaviour
         return 0f;
     }
 
-    private void CheckSlopePos() // repair
-    {
-        frontSlopeCheckPos.y = 0.5f;
-        frontSlopeCheck.position = frontSlopeCheckPos;
+    //private void CheckSlopePos() // fix me
+    //{
+    //    frontSlopeCheckPos.y = 0.5f;
 
-        //Debug.Log("transform" + transform.TransformDirection(transform.position));
-        //Debug.Log("frontslope" + frontSlopeCheckPos);
-        //Debug.Log("slopeHit" + slopeHit.point);
+    //    //Debug.Log("transform" + transform.TransformDirection(transform.position));
+    //    //Debug.Log("frontslope" + frontSlopeCheckPos);
+    //    //Debug.Log("slopeHit" + slopeHit.point);
+    //    SlopeCheckPosFollowToPlayer();
+    //    if (slopeHit.point.y > transform.position.y && isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x;
+    //        frontSlopeCheckPos.z = transform.position.z;
+    //        Debug.Log(moveDirection);
+    //        // slopeCheck.position.z = 0.5
+    //        // (if slope -> ground 도달하면 == isSlopeOn false 일때) slopeCheck.position.z = 0 
+    //    }
+    //    else
+    //    {
+    //        // slopeCheck position.z = 0
+    //        frontSlopeCheckPos.x = transform.position.x;
+    //        frontSlopeCheckPos.z = transform.position.z;
+    //    }
+    //}
 
-        if (slopeHit.point.y > transform.position.y)
-        {
-            Debug.Log(moveDirection);
-            if (moveDirection.z == 1f && !isOnSlope)
-            {
-                frontSlopeCheckPos.x = transform.position.x;
-                frontSlopeCheckPos.z = transform.position.z + 0.3f;
-            }
-            else if (moveDirection.z == -1f && !isOnSlope)
-            {
-                frontSlopeCheckPos.x = transform.position.x;
-                frontSlopeCheckPos.z = transform.position.z - 0.3f;
-            }
-            else if (moveDirection.x == 1f && !isOnSlope)
-            {
-                frontSlopeCheckPos.x = transform.position.x + 0.3f;
-                frontSlopeCheckPos.z = transform.position.z;
-            }
-            else if (moveDirection.x == -1f && !isOnSlope)
-            {
-                frontSlopeCheckPos.x = transform.position.x - 0.3f;
-                frontSlopeCheckPos.z = transform.position.z;
-            } else if (isOnSlope)
-            {
-                frontSlopeCheckPos = transform.position;    
-            }
-
-            // slopeCheck.position.z = 0.5
-            // (if slope -> ground 도달하면 == isSlopeOn false 일때) slopeCheck.position.z = 0 
-        }
-        else
-        {
-            // slopeCheck position.z = 0
-        }
-    }
+    //private void SlopeCheckPosFollowToPlayer() // fix me
+    //{
+    //    if (moveDirection.z == 1f && !isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x;
+    //        frontSlopeCheckPos.z = transform.position.z + 0.3f;
+    //    }
+    //    else if (moveDirection.z == -1f && !isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x;
+    //        frontSlopeCheckPos.z = transform.position.z - 0.3f;
+    //    }
+    //    else if (moveDirection.x == 1f && !isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x + 0.3f;
+    //        frontSlopeCheckPos.z = transform.position.z;
+    //    }
+    //    else if (moveDirection.x == -1f && !isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x - 0.3f;
+    //        frontSlopeCheckPos.z = transform.position.z;
+    //    }
+    //    else if (isOnSlope)
+    //    {
+    //        frontSlopeCheckPos.x = transform.position.x;
+    //        frontSlopeCheckPos.z = transform.position.z;
+    //    }
+    //}
 
     #endregion
 
