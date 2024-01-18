@@ -18,12 +18,15 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT password FROM users WHERE username = '" . $loginUser . "'";
+- playerinfo
 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 	// outpub data of each row
 	while ($row = $result->fetch_assoc()){
+		if ($row["id"] == playerinfo.id)
+			
 		if ($row["password"] == $loginPass){
 			echo "Login Success.";
 			// Get user's data here.
