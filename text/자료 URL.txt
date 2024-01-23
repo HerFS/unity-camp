@@ -70,3 +70,5 @@ https://github.com/Junsu97/Resistance?tab=readme-ov-file
 https://github.com/LHuHyeon/Unity3D_RPG_Portfolio?tab=readme-ov-file
 
 PARSEC - 듀얼로 같이 작업
+
+https://www.php.net/manual/en/function.fputcsv.php - php csv reference
