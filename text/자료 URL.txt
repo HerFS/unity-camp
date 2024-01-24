@@ -76,3 +76,7 @@ https://narakit.tistory.com/183 - c# class
 
 
 #https://m.blog.naver.com/disj0950?categoryNo=25&tab=1
+
+** coding style
+https://rito15.github.io/posts/unity-bad-coding-practices/
+https://unity.com/how-to/naming-and-code-style-tips-c-scripting-unity#classes-and-interfaces
