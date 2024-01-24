@@ -84,3 +84,4 @@ login 버튼 클릭 시 input field에 빈 칸이있으면, id가 없으면, pas
 register 버튼 클릭 시 input field에 빈 칸이있으면, id가 중복된 것이 있으면, password != passwordcheck가 틀리면 팝업창 띄우기
 name input 창 캐릭터 옷 설정, 이름 쓰기
 
+
