@@ -25,15 +25,20 @@ public class Character : MonoBehaviour
     int _currentPantsNum = 0;
     public Button PantsRightBtn;
     public Button PantsLeftBtn;
+
+    Animator _animator;
+    public Button AnimeBtn;
+    int _aniNum;
     // Start is called before the first frame update
     void Awake()
     {
-        InitClothes();
+        _animator = GetComponent<Animator>();
     }
 
     void Start()
     {
-
+        InitClothes();
+        ChangeAnimation();
     }
 
     void InitClothes()
@@ -93,6 +98,15 @@ public class Character : MonoBehaviour
                 value = 0;
             }
             clothesList[value].SetActive(true);
+        });
+    }
+
+    public void ChangeAnimation() // animation 바꾸기
+    {
+        _aniNum = 0;
+        AnimeBtn.onClick.AddListener(() => {
+            _aniNum = Random.Range(0, 4);
+            _animator.SetInteger("Anim", _aniNum);
         });
     }
 }
