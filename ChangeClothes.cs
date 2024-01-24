@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //hairGroup = transform.Find("hairGroup"); // ºÎ¸ğ°¡ ÀÚ½Ä ¿ÀºêÁ§Æ®¿¡ Á¢±Ù
+        //hairGroup = transform.Find("hairGroup"); // ë¶€ëª¨ê°€ ìì‹ ì˜¤ë¸Œì íŠ¸ì— ì ‘ê·¼
 
         InitClothes(HairGroup, HairList);
         ShowDrees(HairList, _currentHairNum);
