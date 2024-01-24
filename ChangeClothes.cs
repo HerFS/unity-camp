@@ -28,42 +28,48 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //hairGroup = transform.Find("hairGroup"); // 부모가 자식 오브젝트에 접근
-
-        InitClothes(HairGroup, HairList);
-        ShowDrees(HairList, _currentHairNum);
-        InitClothes(ShirtGroup, ShirtList);
-        ShowDrees(ShirtList, _currentShirtNum);
-        InitClothes(PantsGroup, PantsList);
-        ShowDrees(PantsList, _currentPantsNum);
+        InitClothes();
     }
 
     void Start()
     {
+
+    }
+
+    void InitClothes()
+    {
+        //hairGroup = transform.Find("hairGroup"); // 부모가 자식 오브젝트에 접근
+
+        SetClothesList(HairGroup, HairList);
+        //ShowDrees(HairList, _currentHairNum);
+        SetClothesList(ShirtGroup, ShirtList);
+        //ShowDrees(ShirtList, _currentShirtNum);
+        SetClothesList(PantsGroup, PantsList);
+        //ShowDrees(PantsList, _currentPantsNum);
         ChangeClothes(_currentHairNum, HairLeftBtn, HairRightBtn, HairList);
         ChangeClothes(_currentShirtNum, ShirtLeftBtn, ShirtRightBtn, ShirtList);
         ChangeClothes(_currentPantsNum, PantsLeftBtn, PantsRightBtn, PantsList);
     }
 
-    void InitClothes(Transform clothesGroup, List<GameObject> clothesList)
+    void SetClothesList(Transform clothesGroup, List<GameObject> clothesList)
     {
         foreach(Transform clothes in clothesGroup)
         {
-            //clothes.gameObject.SetActive(false);
+            clothes.gameObject.SetActive(false);
             clothesList.Add(clothes.gameObject);
         }
         //ShowDrees(clothesList, 1);
-        //clothesList[0].SetActive(true);
+        clothesList[0].SetActive(true);
     }
 
-    void ShowDrees(List<GameObject> clothesList, int dressNumber) // list.Count == array.Length
-    {
-        for (int i = 0; i < clothesList.Count; ++i)
-        {
-            clothesList[i].SetActive(false);
-        }
-        clothesList[dressNumber].SetActive(true);
-    }
+    //void ShowDrees(List<GameObject> clothesList, int dressNumber) // list.Count == array.Length
+    //{
+    //    for (int i = 0; i < clothesList.Count; ++i)
+    //    {
+    //        clothesList[i].SetActive(false);
+    //    }
+    //    clothesList[dressNumber].SetActive(true);
+    //}
 
     public void ChangeClothes(int value, Button leftButton, Button rightButton, List<GameObject> clothesList)
     {
@@ -76,7 +82,6 @@ public class Character : MonoBehaviour
             {
                 value = listMaxNum;
             }
-            Debug.Log(value);
             clothesList[value].SetActive(true);
         });
         rightButton.onClick.AddListener(() =>
@@ -87,7 +92,6 @@ public class Character : MonoBehaviour
             {
                 value = 0;
             }
-            Debug.Log(value);
             clothesList[value].SetActive(true);
         });
     }
