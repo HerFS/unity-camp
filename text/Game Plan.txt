@@ -85,3 +85,4 @@ login 버튼 클릭 시 input field에 빈 칸이있으면, id가 없으면, pas
 register 버튼 클릭 시 input field에 빈 칸이있으면, id가 중복된 것이 있으면, password != passwordcheck가 틀리면 팝업창 띄우기
 name input 창-> 캐릭터 디자인? 캐릭터 부위마다 디자인, 캐릭터이름 입력
 (input field 1개 - 이름 입력), (Button 여러개 부위마다 오른쪽 왼쪽 버튼, 캐릭터 애니메이션 변경 버튼, 확인 버튼(캐릭터이름입력))
+캐릭터 부위 마다 저장하는 값을 PlayerPrefs에 저장함. -> PlayerPrefs 는 임시저장으로 중요한 정보 X
