@@ -7,7 +7,7 @@ GameObject 메뉴
 Layers 오른쪽 위의 메뉴
 Hierarchy 창이나 Inspection 창, Game 창 등의 크기 설정
 
-Edit - Undo History
+Edit - Undo History - Ctrl + U
 
 Universal Render PipeLine 설정
 1. Package Manager - Unity Registry - Search(Universal RP)

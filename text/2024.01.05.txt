@@ -2,6 +2,9 @@ if 문, bool type
 
 potal 만들기
 transform 기능은 대부분 FixedUpdate에 둘 것 만약 Update에 기능을 넣으면 RigidBody 기능 중 Collision Detection - Continuous 로 변경
+
+rigidbody Collision Detection 
+
 1. Discrete: 기본값이며 CPU를 가장 적게 사용하는 옵션입니다.
 물리 엔진은 각 물리 시간 단계가 끝날 때만 충돌을 확인합니다.
 이로 인해 때때로 빠르게 움직이는 물체가 충돌을 감지하지 않고 다른 물체를 통과하는 "터널링"으로 알려진 문제가 발생할 수 있습니다.
