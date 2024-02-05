@@ -59,7 +59,7 @@ public class Player : Controller
 
     protected override void UpdateIdle()
     {
-        // TODO : °¡¸¸È÷ ÀÖÀ»¶§ÀÇ ¸ğ¼Ç ÀÖÀ¸¸é »ç¿ë
+        // TODO : ê°€ë§Œíˆ ìˆì„ë•Œì˜ ëª¨ì…˜ ìˆìœ¼ë©´ ì‚¬ìš©
     }
 
     protected override void UpdateWalk()
