@@ -8,12 +8,6 @@ playerStat
 - 캐릭터 상호작용 키(상호작용, 아이템 줍기, 앉기, 아이템창, 스킬, 공격, 소모 아이템)
 - 경사로 체크, 콜라이더 설정, 바닥 체크, rigidbody, 앉을 때 collider 반으로 줄임
 
-데이터를 저장해야 하는 것
-플레이어 스탯, 플레이어 아이템들, 플레이어 퀘스트
-몬스터 스탯
-
-
-
 카메라
 - 카메라가 플레이어를 바라봄.
 - alt 마우스 왼쪽클릭으로 카메라 회전가능(커맨드 키)
@@ -77,12 +71,5 @@ public
 chat system(전쳇, 파티쳇, 길드쳇)
 party system, guild system
 
-씬 종류 - 메인 메뉴 첫 화면 씬, 인 게임 씬, 던전 씬?
-
-로그인화면 -> (input field 2개 - loginId, password), (Button 2개 - login btn 클릭시 nameinput으로 이동, register 창으로가는버튼) PHP 로그인 하기 
-login 버튼 클릭 시 input field에 빈 칸이있으면, id가 없으면, password가 틀리면 팝업창 띄우기
-회원가입 화면 -> (input field 4개 user name, loginId, password, passwordcheck) (Button 2개 - cancel 버튼 클릭시 login 창으로 이동, register 버튼 클릭시 login창으로 이동) PHP 유저 정보 저장
-register 버튼 클릭 시 input field에 빈 칸이있으면, id가 중복된 것이 있으면, password != passwordcheck가 틀리면 팝업창 띄우기
-name input 창-> 캐릭터 디자인? 캐릭터 부위마다 디자인, 캐릭터이름 입력
-(input field 1개 - 이름 입력), (Button 여러개 부위마다 오른쪽 왼쪽 버튼, 캐릭터 애니메이션 변경 버튼, 확인 버튼(캐릭터이름입력))
-캐릭터 부위 마다 저장하는 값을 PlayerPrefs에 저장함. -> PlayerPrefs 는 임시저장으로 중요한 정보 X
+abstract class 사용 시 상속을 받고있는 자식들은 update, fixed update 사용하면 멈춰버림 이유 
+rigidbody 물리 공부하기

@@ -25,11 +25,12 @@ https://sikpang.tistory.com/2
 
 Rigidbody Movement 경사면 
 https://daekyoulibrary.tistory.com/entry/Charon-3-%EA%B2%BD%EC%82%AC%EB%A1%9CSlope-%EC%A7%80%ED%98%95-%EC%9D%B4%EB%8F%99-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
-velocity 점프
-https://tenlie10.tistory.com/124
 
 event function life cycle
 https://docs.unity3d.com/kr/2021.3/Manual/ExecutionOrder.html
+
+새로운 input system
+https://uniti.tistory.com/91
 
 Keycode 종류
 https://chameleonstudio.tistory.com/26
@@ -63,7 +64,6 @@ https://wlsdn629.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-Vector3
 
 블로그
 https://wlsdn629.tistory.com/entry/%EC%9C%A0%EB%8B%88%ED%8B%B0-Rigidbody-Collision-Detection
-https://programmingdev.com/unityc-list%EC%99%80-dictionary%EB%A5%BC-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90/
 
 
 포트폴리오
@@ -72,12 +72,5 @@ https://github.com/LHuHyeon/Unity3D_RPG_Portfolio?tab=readme-ov-file
 
 PARSEC - 듀얼로 같이 작업
 
-https://www.php.net/manual/en/function.fputcsv.php - php csv reference
-https://narakit.tistory.com/183 - c# class
-
-
-#https://m.blog.naver.com/disj0950?categoryNo=25&tab=1
-
-** coding style
-https://rito15.github.io/posts/unity-bad-coding-practices/
-https://unity.com/how-to/naming-and-code-style-tips-c-scripting-unity#classes-and-interfaces
+최적화 - 매우 중요
+https://rito15.github.io/posts/unity-opt-script-optimization/
