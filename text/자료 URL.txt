@@ -74,3 +74,6 @@ PARSEC - 듀얼로 같이 작업
 
 최적화 - 매우 중요
 https://rito15.github.io/posts/unity-opt-script-optimization/
+
+가상 테이블 - 내부 돌아가는 방법 중요!
+https://cosyp.tistory.com/228
