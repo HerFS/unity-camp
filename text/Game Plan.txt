@@ -1,6 +1,9 @@
 https://github.com/LHuHyeon/Unity3D_RPG_Portfolio?tab=readme-ov-file
 https://github.com/Junsu97/Resistance?tab=readme-ov-file
 
+모델링 - 컨셉 
+https://www.syntystudios.com/
+
 우선 캐릭터를 먼저 선정한다.
 playerStat
 - 캐릭터 움직임(걷기, 달리기, 점프)
