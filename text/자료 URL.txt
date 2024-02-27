@@ -80,3 +80,6 @@ https://rito15.github.io/posts/unity-opt-script-optimization/
 
 가상 테이블 - 내부 돌아가는 방법 중요!
 https://cosyp.tistory.com/228
+
+unity 데미지 무적시간 
+https://unity-chan.com/download/index.php
