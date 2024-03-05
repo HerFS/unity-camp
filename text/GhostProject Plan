@@ -1,27 +1,31 @@
 SOUND
-1. stamina가 0일 때 한 숨 소리 필요함.
+1. stamina가 0일 때 한 숨 소리 필요함. O
 2. 발걸음 소리 변경하기.
-3. 시간 되면 가로등 소리도 변경.
+3. 시간 되면 가로등 소리도 변경. O
 
 SYSTEM
 1. showif 버튼을 체크했을 때 serializefield 보이게 하기 - interaction script
 
 CHANGE
-1. statsManager, playercontroller, playerstats 교체하기
+1. statsManager, playercontroller, playerstats 교체하기 O
 2. watchghost, movedoll 교체하기 - 이름도 변경해야됨 어울리는 이름으로.
 
 INTERACTION
 1. 구급차 고치기 - 구급차 범위 들어갔을 때 사이렌 울리기, 구급차 문에서 상호작용 키 사용하면 노래, 사이렌 꺼지게 하기.
-
+2. rotationGate 를 Interaction과 엮기.
+3. SenceAhead에서 interaction 관련된 함수 전부 고치기
 
 PROPS
-1. 손전등 가지고 있으면 F로 껐다 켰다 가능. - 바데리 기능 추가하기 [바데리 용량 3칸] 1칸당 1분씩 총 3분 사용 가능?
-2. 바데리 아이템 추가. 먹으면 손전등 아이템의 바데리가 풀충전 됨.
-3. 스피드 알약? 지속시간동안 이속이 빨라지게? - 시간 나면 만들기
-4. 게이트 오픈 좌표 고치기
+1. 손전등 가지고 있으면 F로 껐다 켰다 가능. O
+2. 바데리 기능 추가하기 [바데리 용량 3칸] 1칸당 1분씩 총 3분 사용 가능?
+3. 바데리 아이템 추가. 먹으면 손전등 아이템의 바데리가 풀충전 됨.
+4. 스피드 알약? 지속시간동안 이속이 빨라지게? - 시간 나면 만들기
+5. 게이트 오픈 좌표 고치기
 
 MAP
-1. 우선 병원 주변에 울타리(Fence) 설치 
+--- Scene Load 로 변경 ---
+MainMenu -> Start On Load -> Hospital(OutSide) <-> Hospital(Inside)
+1. 우선 병원 주변에 울타리(Fence) 설치
 2. 바리게이트 설치.
 3. 주차장에 있는 구급차 다시 설정하기.
 4. 병원에 들어가기 전 옆에 건물 한게 놓기.
@@ -51,6 +55,11 @@ STORY
 
 이렇게 다 되면 이제 병원 내부 만들기
 
+
+Game Clear
+공동묘지의 있는 귀신들의 한을 풀어줘야 함. 그러려면 병원에 숨겨져 있는 귀신들의 한이 들린 아이템들을 전부 모아 묘지로 가져가면 성공!
+병원에 있는 아이템을 전부 구하면 종료..?
+뭐가 있을까..?
 
 --- 에셋 ---
 Ababdibed Asylum - 병원 내부
