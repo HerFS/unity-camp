@@ -5,6 +5,11 @@ SOUND
 
 SYSTEM
 1. showif 버튼을 체크했을 때 serializefield 보이게 하기 - interaction script
+2. 아이템 시스템 구현하기 : 손전등 바데리, 보안 카드, 열쇠 등..
+3. 인벤토리 시스템 : 마인크래프트 처럼 화면에 보이는 아이템 창 5개 보이게하기.
+4. 자동문도 만들기.
+5. 자동으로 켜지는 라디오.
+
 
 CHANGE
 1. statsManager, playercontroller, playerstats 교체하기 O
@@ -12,8 +17,13 @@ CHANGE
 
 INTERACTION
 1. 구급차 고치기 - 구급차 범위 들어갔을 때 사이렌 울리기, 구급차 문에서 상호작용 키 사용하면 노래, 사이렌 꺼지게 하기.
-2. rotationGate 를 Interaction과 엮기.
+2. rotationGate 를 Interaction과 엮기. O
 3. SenceAhead에서 interaction 관련된 함수 전부 고치기
+4. 잠긴 문, 잠긴 캐비넷 등 잠겨있으면 덜커덩(잠긴 소리) 사운드 플레이하기.
+5. 전등 On/Off 기능 추가.
+6. 창문 열기.
+7. 아이템 줍기
+8. 라디오 켜기 - 사운드 켜기 / 끄기
 
 PROPS
 1. 손전등 가지고 있으면 F로 껐다 켰다 가능. O
@@ -25,10 +35,17 @@ PROPS
 MAP
 --- Scene Load 로 변경 ---
 MainMenu -> Start On Load -> Hospital(OutSide) <-> Hospital(Inside)
+- 씬 변경 될 때 fade effect주기.
 1. 우선 병원 주변에 울타리(Fence) 설치
 2. 바리게이트 설치.
 3. 주차장에 있는 구급차 다시 설정하기.
 4. 병원에 들어가기 전 옆에 건물 한게 놓기.
+
+GHOST
+1. 범위 내에 들어갔을 때 쳐다보지 않으면 귀신이 따라옴 30초동안 쳐다보고 있으면 귀신이 사라짐.
+2. 범위 내에서 느리게 걷거나 가만히 있지 않을 동안 시간초를 재서 정해진 시간초 보다 시간이 넘으면 따라오게 만들기.
+3. 뒤를 돌아보는 순간 바로 따라오는 귀신 만들기.
+
 
 STORY
 1. 우선 도로위에서 공사장 간부 한명을 만나서 이야기를 한다. - Dialog System 으로 사용
