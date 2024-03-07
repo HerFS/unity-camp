@@ -1,12 +1,13 @@
 STATS 에서 hp 빼기
-RotationGate
-SenseAhead
-Interaction
-Warp
+RotationGate O
+SenseAhead O
+Interaction O
+Warp O
 텔레포트 -> 열쇠가 없음.
 문열기 -> 카드가 없으면 문을 못열음
 열쇠 필요없는 문
 인형 애니메이션
+캐릭터에 빛 추가 하기 손전등 제거하고, 손전등 아이템을 주워야지 손전등 사용가능.
 
 
 
