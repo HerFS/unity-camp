@@ -70,6 +70,7 @@ public
 이동속도
 점프를 하는지?
 크리티컬 데미지?
+시야 범위 ( 감지 범위 )
 
 chat system(전쳇, 파티쳇, 길드쳇)
 party system, guild system
