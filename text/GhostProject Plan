@@ -1,3 +1,5 @@
+singleton pattern 에서 awake 빼기
+
 STATS 에서 hp 빼기
 RotationGate O
 SenseAhead O
