@@ -1,0 +1,4 @@
+horror project revised version
+1. SenseAhead InteractionInit function deleted is UIManger.Instance.InteractionUI.setActivity(false);
+2. need to UIManger.Instance.InteractionUI.setActivity(false); In all files
+3. added the file name is WalkSound. and edit file is playercontroller added information about jumping
