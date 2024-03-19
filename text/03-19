@@ -5,5 +5,5 @@ automaticdoors
 item function
 item scriptable
 dontdestroy canvars
-창 넘어가면 ui 가 변경 된 사실을 컴퓨터는 모름.
+창 넘어가면 ui 가 변경 된 사실을 컴퓨터는 모름. - ghostimage find로 변경필요
 find로 해야되나..
