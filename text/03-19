@@ -1,5 +1,7 @@
 define - trasnformchoice
 ghost - teleportbehind, teleportghost, ghostbehind(dontbehind)
+
+teleportghost = 실행 후 다시 불켜기
 automaticdoors
 
 item function
