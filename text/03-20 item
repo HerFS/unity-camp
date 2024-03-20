@@ -64,8 +64,9 @@ public Image itemImage; // 아이템의 이미지
 [SerializeField]
 private TMP_Text countText;
 [SerializeField]
-private GameObject countImage;
+private GameObject countImage; // 게임 도중 활성화 / 비활성화 시킬 오브젝트는 무조건 GameObject Type으로 해야 됨!
 
+// 아이템 투명도 조절 Function
 private void SetColor(float alpha)
 {
  Color color = itemImage.color;
@@ -73,13 +74,14 @@ private void SetColor(float alpha)
  itemImage.color = color;
 }
 
+// 아이템 추가 Function
 public AddItem(Item item, int count = 1) // 이렇게 count 1개를 정해놓고 매개변수 item만 대입.
 {
  this.item = item; // this를 넣는 이유는 매개변수 이름과 같기 때문에 전역변수 item에 this를 넣어줌.
  this.itemCount = count;
  this.itemImage.sprite = item.itemImage;
 
- if (this.item.Type == Item.itemType.Equipment) 
+ if (this.item.Type != Item.itemType.Equipment) 
  {
   countImage.SetActive(true);
   countText.text = this.itemCount.ToString();
@@ -93,6 +95,7 @@ public AddItem(Item item, int count = 1) // 이렇게 count 1개를 정해놓고
  SetColor(1);
 }
 
+// 아이템 개수 업데이트 Function
 public void SetSlotCount(int count)
 {
  this.itemCount += count;
@@ -103,6 +106,7 @@ public void SetSlotCount(int count)
  }
 }
 
+// 슬롯 클리어 Function
 private void ClearSlot()
 {
  this.item = null;
