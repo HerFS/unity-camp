@@ -31,7 +31,7 @@ public enum WeaponType {
   Range,
 }
 
-public ItemType ItemType;
+public ItemType Type;
 
 public string ItemName; // 아이템 이름
 public stirng ItemDescription; // 아이템의 설명 
@@ -43,3 +43,73 @@ public string weaponType; // 무기 유형.
 
 /* ---------- PickUpItem ---------- */
 public Item item;
+
+
+
+Inventory 만들기
+Inventory - Grid Layout Group 안에 Slot들이 들어감.
+
+우선 Inventory Slot들 만들기
+
+Inventory Slot 에서 필요한 정보들
+우선 비어있는지 체크? null check
+만약 존재한 다면 item type을 체크해서 count를 표시할 지 안할 지 결정
+CountImage - 개수를 표시하는 이미지
+Count - 아이템의 개수
+
+public Item item; // 획득한 아이템
+public int itemCount; // 획득한 아이템의 개수
+public Image itemImage; // 아이템의 이미지
+
+[SerializeField]
+private TMP_Text countText;
+[SerializeField]
+private GameObject countImage;
+
+private void SetColor(float alpha)
+{
+ Color color = itemImage.color;
+ color.a = alpha;
+ itemImage.color = color;
+}
+
+public AddItem(Item item, int count = 1) // 이렇게 count 1개를 정해놓고 매개변수 item만 대입.
+{
+ this.item = item; // this를 넣는 이유는 매개변수 이름과 같기 때문에 전역변수 item에 this를 넣어줌.
+ this.itemCount = count;
+ this.itemImage.sprite = item.itemImage;
+
+ if (this.item.Type == Item.itemType.Equipment) 
+ {
+  countImage.SetActive(true);
+  countText.text = this.itemCount.ToString();
+ }
+ else
+ {
+  countText.text = "0";
+  countImage.SetActive(false);
+ }
+
+ SetColor(1);
+}
+
+public void SetSlotCount(int count)
+{
+ this.itemCount += count;
+ countText.text = this.itemCount.ToString();
+ if (this.itemCount <= 0)
+ {
+  ClearSlot();
+ }
+}
+
+private void ClearSlot()
+{
+ this.item = null;
+ this.itemCount = 0;
+ this.itemImage.sprite = null;
+ SetColor(0);
+
+ countText.text = "0";
+ countImager.SetActive(false);
+}
