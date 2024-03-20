@@ -1,4 +1,11 @@
 -inventory url = https://ansohxxn.github.io/unity%20lesson%203/ch5-1/
+need fixed
+1. mangers Awake -> onEnable
+2. fixed teleport ghost 
+3. behindghost -> naming change is SpawnGhostBehindArea
+4. need to export for item, inventory ui
+
+
 인벤토리 배열 - 번호로 선택 or 방향키?
  ㄴ 나의 인벤토리
 
@@ -6,10 +13,6 @@
 bool hasItem
 image sprite -> 아이템 아이콘으로
 선택했을ㄸ때 아이템 이름
-
-
-fixed teleport ghost 
-behindghost -> naming change is spawnghostbehindarea
 
 
 make item
