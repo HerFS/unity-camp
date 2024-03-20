@@ -1,0 +1,45 @@
+item 에 대해서 
+item 의 정보
+public enum 으로 type 정의
+item type 으로는
+ ㄴ Used(사용) - 포션, 버프 등..
+ ㄴ Ingredient(재료) - quest를 위한 아이템 ex) 곰 가죽, 뱀의 꼬리 등..
+ ㄴ Equipment(장비) - 갑옷의 종류 (모자, 상의, 하의, 신발, 무기) 이렇게만 하기로.
+ ㄴ ETC(나머지)
+생각나면 추가 하기로!
+
+
+
+Scriptable로 item 만들기
+/* ---------- Item ---------- */
+public enum ItemType {
+  Used,
+  Ingredient,
+  Equipment,
+  ETC,
+}
+
+public enum EquipmentType {
+  Head,
+  Top,
+  Bottom,
+  Shoes,
+}
+
+public enum WeaponType {
+  Melee,
+  Range,
+}
+
+public ItemType ItemType;
+
+public string ItemName; // 아이템 이름
+public stirng ItemDescription; // 아이템의 설명 
+public Sprite ItemImage; // 아이템의 이미지 ( 인벤토리 안에서 띄울 이미지 )
+public GameObject ItemPrefab; // 아이템의 프리팹 ( 생성 시 프리팹으로 찍어냄 )
+
+public string weaponType; // 무기 유형.
+
+
+/* ---------- PickUpItem ---------- */
+public Item item;
