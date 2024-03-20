@@ -1,0 +1,58 @@
+-inventory url = https://ansohxxn.github.io/unity%20lesson%203/ch5-1/
+인벤토리 배열 - 번호로 선택 or 방향키?
+ ㄴ 나의 인벤토리
+
+인벤토리 슬롯 
+bool hasItem
+image sprite -> 아이템 아이콘으로
+선택했을ㄸ때 아이템 이름
+
+
+fixed teleport ghost 
+behindghost -> naming change is spawnghostbehindarea
+
+
+make item
+tag = item type (used, prop, ingredient, etc)
+layer = layer for all items is Item.
+collider
+rigidbody - mass is 0.01
+
+
+item scriptable
+ ㄴ ItemType - enum
+
+ ㄴ item type - ItemType
+ ㄴ item image - Sprite
+	ㄴ sprite 사용하는 이유 - 월드 어디서든 배치될 수 있도록!
+	ㄴ '인벤토리'에서 아이템을이미지로서 보기 위한, 아이템을 대표하는 이미지
+		ㄴ 인벤토리에서 사용되기 위해 필요
+ ㄴ item name - string
+ ㄴ item description - string
+ ㄴ itemprefab - GameObject 
+
+string weaponType? -> pick up item animation 마다 다르기때문
+
+Image -> Canvas 위에서만 이미지를 띄울 수 있음
+Sprite -> Canvas와 상관없이 월드 어디에서든 이미지를 띄울 수 있음
+
+데이터들을 저장하는데 사용할 수 있는 데이터 컨테이너 에셋
+좀비1 instance - hp 50 eyesight 10 speed 20
+좀비2 instance - hp 50 eyesight 10 speed 20
+좀비3 instance - hp 50 eyesight 10 speed 20
+
+카산드라 - eyesight 5
+헬레나 - eyesight 5
+
+각각의 좀비 오브젝트들은 체력, 시야, 속도 값이 모두 같다고 가정해보자.
+좀비 프리팹으로 좀비 오브젝트 3개를 찍어내면 동일한 이 체력, 시야, 속도 값이 3 개나 사본으로 생성되는 셈이다.
+
+Zombie hp 50 eyesight 10 speed 20 (Scriptable Object)
+ ㄴ 좀비 1, 좀비 2, 좀비 3
+NPC eyesight 5 (Scriptable Object)
+ ㄴ 카산드라, 헬레나
+이렇게 ScriptableObject를 상속받는 Data Class를 만들고 참조하면 메모리를 효율적으로 관리가 가능
+[CreateAssetmenu(fileName = "String", menuName = "fileName/Item")]
+// filename 이 에셋을 생성하게 되면 기본적으로 지어질 이름
+// menuName 유니티 에셋-우클-Create- 메뉴에 보일 이름
+// order 메뉴에 보일 순서 (기본적으론 첫 번째)
