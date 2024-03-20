@@ -5,6 +5,16 @@ need fixed
 3. behindghost -> naming change is SpawnGhostBehindArea
 4. need to export for item, inventory ui, SenseAhead
 
+이제 앞으로 구현해야 할 것.
+메인메뉴
+아이템, 인벤토리 - 배터리, 열쇠, 카드 열쇠, 손전등, 탈출권?- 병원앞으로 순간이동.
+fade in out,
+dialog system
+시네마틱..?
+story
+장소, 사운드
+발소리
+
 
 인벤토리 배열 - 번호로 선택 or 방향키?
  ㄴ 나의 인벤토리
@@ -12,7 +22,7 @@ need fixed
 인벤토리 슬롯 
 bool hasItem
 image sprite -> 아이템 아이콘으로
-선택했을ㄸ때 아이템 이름
+선택했을때 아이템 이름
 
 
 make item
