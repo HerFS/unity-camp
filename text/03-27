@@ -14,6 +14,11 @@ Solid 원칙
 영문타자 ㅋ-ㅋ
 
 Handles keyword - 시야각 만들 수 있음 DrawGizmos 상위 버전?
+https://wolstar.tistory.com/4
+
+Physics.Overlapsphere - 순간 판정할 때 사용하기 좋음.
+https://a-game-developer0724.tistory.com/54
+
 event keyword
 
 ghost 감지와 interaction 감지 나누기..?
