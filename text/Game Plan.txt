@@ -12,6 +12,19 @@ https://github.com/Junsu97/Resistance?tab=readme-ov-file
 https://www.syntystudios.com/
 
 우선 캐릭터를 먼저 선정한다.
+캐릭터의 기능들.
+   ㄴ Input - Move(WASD), MouseInput, Jump(SpaceBar), Interaction(E), Inventory(I), Equip(U?), Attack(Mouse, Ctrl), PickUp(Z)
+   ㄴ Movement - Animation, Movement
+   ㄴ PlayerStats - MoveSpeed, JumpForce, HP, MP, Attack Damage, Regen Speed, Critical(Percent, Damage), 
+   ㄴ Ground Check - Slop Check, Jump
+   ㄴ Player State - Walk, Run, Sit, Attack, 
+   ㄴ Sound
+   ㄴ Quest
+Equip
+   ㄴ Inventroy UI
+   ㄴ Equip UI
+   ㄴ Prop(Weapon)
+
 playerStat
 - 캐릭터 움직임(걷기, 달리기, 점프)
 - 캐릭터 애니메이션
