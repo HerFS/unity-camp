@@ -10,6 +10,12 @@ https://github.com/Junsu97/Resistance?tab=readme-ov-file
 
 patrolling
 
+필요한 Package
+ ㄴ AI Navigation
+ ㄴ Rigging
+ ㄴ InputSystem
+
+
 모델링 - 컨셉 
 https://www.syntystudios.com/
 
