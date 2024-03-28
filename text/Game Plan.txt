@@ -17,7 +17,7 @@ https://www.syntystudios.com/
    ㄴ Movement - Animation, Movement
    ㄴ PlayerStats - MoveSpeed, JumpForce, HP, MP, Attack Damage, Regen Speed, Critical(Percent, Damage), 
    ㄴ Ground Check - Slop Check, Jump
-   ㄴ Player State - Walk, Run, Sit, Attack, 
+   ㄴ Player State - Idle, Walk, Run, Sit, Attack, Die
    ㄴ Sound
    ㄴ Quest
 Equip
